@@ -26,7 +26,7 @@ sucata.graphic = {}
 ---@field color string? The color of the text in hex format (default: "#ffffff")
 ---@field zIndex number? The z-index for rendering order (default: 0)
 ---@field text string? The text content to display (default: "")
----@field font string? The path to the font file (default: "src/fonts/PixelatedElegance.ttf")
+---@field font string? The path to the font file (default: "Arial")
 ---@field scale number? The uniform scale factor (default: 1.0)
 ---@field scaleX number? The horizontal scale factor (default: 1.0)
 ---@field scaleY number? The vertical scale factor (default: 1.0)
