@@ -6,10 +6,6 @@ sucata = {}
 
 ---@class Entity
 ---@field id string The unique identifier of the entity
----@field x number The x position of the entity
----@field y number The y position of the entity
----@field width number The width of the entity
----@field height number The height of the entity
 
 ---@class Timer
 ---@field time number The duration of the timer in seconds
