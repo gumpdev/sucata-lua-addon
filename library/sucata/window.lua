@@ -60,3 +60,11 @@ function sucata.window.quit() end
 ---Set whether to show debug information
 ---@param show boolean Whether to show debug information
 function sucata.window.show_debug_info(show) end
+
+---Set whether to keep the aspect ratio with black bars
+---@param keep boolean Whether to maintain the aspect ratio
+function sucata.window.set_keep_aspect(keep) end
+
+---Get whether the window keeps aspect ratio with black bars
+---@return boolean keep Whether aspect ratio is maintained
+function sucata.window.get_keep_aspect() end
