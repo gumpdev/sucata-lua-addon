@@ -5,7 +5,7 @@
 sucata = {}
 
 ---@class Entity
----@field id string? The unique identifier of the entity
+---@field id string? The unique identifier of the entity, will have an id when spawned
 ---@field update function? The update function called every frame, contains self as parameter
 ---@field draw function? The draw function called every frame, contains self as parameter
 ---@field free function? The free function called when the entity is destroyed, contains self as parameter
