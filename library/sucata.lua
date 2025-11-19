@@ -32,6 +32,13 @@ sucata = {}
 ---@field origin_x? number Origin point on X axis (default: 0.0)
 ---@field origin_y? number Origin point on Y axis (default: 0.0)
 ---@field rotation? number Rotation in degrees (default: 0.0)
+---@field atlas_size? number Size of the texture atlas (default: 0.0)
+---@field atlas_width? number Width of each frame in the texture atlas (default: 0.0)
+---@field atlas_height? number Height of each frame in the texture atlas (default: 0.0)
+---@field atlas_spacing? number Spacing between frames in the texture atlas (default: 0.0)
+---@field atlas_margin? number Margin around the frames in the texture atlas (default: 0.0)
+---@field atlas_x? number X index of the frame in the texture atlas	(default: 0.0)
+---@field atlas_y? number Y index of the frame in the texture atlas (default: 0.0)
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)
