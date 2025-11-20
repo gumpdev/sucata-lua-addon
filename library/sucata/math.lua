@@ -38,3 +38,10 @@ function sucata.math.overlapping(rect1, rect2) end
 ---@return number width The width in pixels
 ---@return number height The height in pixels
 function sucata.math.screen_relative(rect) end
+
+---Convert time to integer numbers by time
+---@param current_time number The current time, accumulated delta time
+---@param interval number The time of the interval by seconds
+---@param max_time number? The maximum time to cap the result (default: nil)
+---@return number index The calculated index, will be a integer
+function sucata.math.smooth_index(current_time, interval, max_time) end
