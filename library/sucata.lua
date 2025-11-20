@@ -67,3 +67,10 @@ sucata = {}
 ---@field left? number Left position as percentage (0-1) (default: 0)
 ---@field right? number Right position as percentage (0-1) (default: 0)
 ---@field bottom? number Bottom position as percentage (0-1) (default: 0)
+
+---@class AudioProps
+---@field sound string Path to the sound file
+---@field volume? number Volume of the sound (default: 1.0)
+---@field pitch? number Pitch of the sound (default: 1.0)
+---@field group? string Audio group (default: "default")
+---@field loop? boolean Whether the sound should loop (default: false)
