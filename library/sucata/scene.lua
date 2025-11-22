@@ -5,16 +5,16 @@
 sucata.scene = {}
 
 ---Load a scene with the given entities
----@param entities table[] Array of entity tables to load into the scene
+---@param entities Entity[] Array of entity tables to load into the scene
 function sucata.scene.load_scene(entities) end
 
 ---Spawn an entity in the scene
----@param entity table The entity table to spawn
+---@param entity Entity The entity table to spawn
 ---@return string entity_id The ID of the spawned entity
 function sucata.scene.spawn(entity) end
 
 ---Spawn multiple entities in the scene
----@param entities table[] Array of entity tables to spawn
+---@param entities Entity[] Array of entity tables to spawn
 ---@return string[] entity_ids Array of IDs of the spawned entities
 function sucata.scene.spawns(entities) end
 
