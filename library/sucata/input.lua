@@ -78,3 +78,9 @@ function sucata.input.is_held(...) end
 ---@param ... sucata.input.Key Key or button names to check
 ---@return boolean released Whether any of the keys/buttons were released
 function sucata.input.is_released(...) end
+
+---Check if the mouse is hovering over a specific area for an entity
+---@param entity string|table The entity ID or entity table
+---@param area {x: number, y: number, width: number, height: number, z_index: number?} The area to check for hover (z_index is optional)
+---@return boolean hovering Whether the mouse is hovering over the specified area
+function sucata.input.is_hover(entity, area) end
