@@ -10,6 +10,7 @@ sucata = {}
 ---@field draw function? The draw function called every frame, contains self as parameter
 ---@field free function? The free function called when the entity is destroyed, contains self as parameter
 ---@field init function? The init function called when the entity is spawned, contains self as parameter
+---@field [string] any Custom properties - you can add any field you want to the entity
 
 ---@class Timer
 ---@field time number The duration of the timer in seconds
