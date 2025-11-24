@@ -58,6 +58,8 @@ sucata = {}
 ---@field origin_x? number Origin point on X axis (default: 0.0)
 ---@field origin_y? number Origin point on Y axis (default: 0.0)
 ---@field rotation? number Rotation in degrees (default: 0.0)
+---@field align? string Text alignment: "left", "center", or "right" (default: "left")
+---@field max_width? number Maximum width of the text (default: 0.0)
 
 ---@class Rect
 ---@field x number The x position
