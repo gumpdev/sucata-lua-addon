@@ -32,3 +32,8 @@ function sucata.filesystem.read_dir(path) end
 ---@param content string Content to write to the file
 ---@return boolean success True if the write was successful, false otherwise
 function sucata.filesystem.write(path, content) end
+
+---Renames a file or directory
+---@param old_path string Current path of the file or directory
+---@param new_path string New path of the file or directory
+function sucata.filesystem.rename(old_path, new_path) end
