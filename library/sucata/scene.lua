@@ -39,6 +39,12 @@ function sucata.scene.destroys(entities) end
 ---@return boolean success Whether the tag was successfully added
 function sucata.scene.add_tag(entity_or_id, tag) end
 
+---Check if an entity has a tag
+---@param entity_or_id Entity|string The entity table or entity ID
+---@param tag string The tag to check
+---@return boolean success Whether the entity has the tag
+function sucata.scene.has_tag(entity_or_id, tag) end
+
 ---Remove a tag from an entity
 ---@param entity_id string The ID of the entity
 ---@param tag string The tag to remove
