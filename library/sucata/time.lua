@@ -4,7 +4,7 @@
 ---@class sucata.time
 sucata.time = {}
 
----Get the delta time (time elapsed since last frame) in seconds
+---Get the delta time (time elapsed since last frame) in seconds, multiplied by the time scale
 ---@return number delta The delta time in seconds
 function sucata.time.get_delta() end
 
@@ -25,3 +25,11 @@ function sucata.time.pause_timer(timer_id) end
 ---Stop a timer
 ---@param timer_id string The ID of the timer to stop
 function sucata.time.stop_timer(timer_id) end
+
+---Get time scale
+---@return number time_scale The current time scale value
+function sucata.time.get_time_scale() end
+
+---Set time scale
+---@param time_scale number The new time scale value
+function sucata.time.set_time_scale(time_scale) end
