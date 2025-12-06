@@ -41,6 +41,8 @@ sucata = {}
 ---@field atlas_margin? number Margin around the frames in the texture atlas (default: 0.0)
 ---@field atlas_x? number X index of the frame in the texture atlas	(default: 0.0)
 ---@field atlas_y? number Y index of the frame in the texture atlas (default: 0.0)
+---@field flip_x? boolean Whether to flip the texture on the X axis (default: false)
+---@field flip_y? boolean Whether to flip the texture on the Y axis (default: false
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)
