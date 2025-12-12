@@ -62,9 +62,9 @@ function sucata.window.quit() end
 function sucata.window.show_debug_info(show) end
 
 ---Set whether to keep the aspect ratio with black bars
----@param keep boolean Whether to maintain the aspect ratio
+---@param keep number Whether to maintain the aspect ratio (0 = off, 1 = keep aspect with bars, 2 = keep aspect with crop)
 function sucata.window.set_keep_aspect(keep) end
 
 ---Get whether the window keeps aspect ratio with black bars
----@return boolean keep Whether aspect ratio is maintained
+---@return number keep Whether aspect ratio is maintained (0 = off, 1 = keep aspect with bars, 2 = keep aspect with crop)
 function sucata.window.get_keep_aspect() end
