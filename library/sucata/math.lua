@@ -45,3 +45,15 @@ function sucata.math.screen_relative(rect) end
 ---@param max_time number? The maximum time to cap the result (default: nil)
 ---@return number index The calculated index, will be a integer
 function sucata.math.smooth_index(current_time, interval, max_time) end
+
+---Normalize a vector (accepts variable number of components)
+---@param ... number Vector components (x, y, z, etc.)
+---@return number ... Normalized vector components (same count as input)
+function sucata.math.normalize(...) end
+
+---Move a value towards a target by a maximum step
+---@param current number The current value
+---@param target number The rget value
+---@param step number The maximum step to move per call
+---@return number result The new value moved towards target
+function sucata.math.move_towards(current, target, step) end
