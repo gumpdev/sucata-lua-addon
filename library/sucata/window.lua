@@ -68,3 +68,11 @@ function sucata.window.set_keep_aspect(keep) end
 ---Get whether the window keeps aspect ratio with black bars
 ---@return number keep Whether aspect ratio is maintained (0 = off, 1 = keep aspect with bars, 2 = keep aspect with crop)
 function sucata.window.get_keep_aspect() end
+
+---Set the window icon from a file path
+---@param path string The file path to the icon image
+function sucata.window.set_window_icon(path) end
+
+---Get the current window icon path
+---@return string path The file path of the current window icon
+function sucata.window.get_window_icon() end
