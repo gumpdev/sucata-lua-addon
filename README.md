@@ -6,6 +6,14 @@ additional functionality and enhancements for
 
 ## How to install
 
+### Addon Manager Install
+
+1. Install the [sumneko lua extension](https://luals.github.io/)
+2. Open the Addon Manager
+3. Search for 'sucata' and install
+
+### Manual Install
+
 1. Install the [sumneko lua extension](https://luals.github.io/)
 2. Create a custom LuaAddons folder in any location you prefer.
 3. Clone or download this repository into the LuaAddons folder.
