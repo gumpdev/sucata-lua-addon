@@ -34,6 +34,7 @@ sucata = {}
 ---@field origin_x? number Origin point on X axis (default: 0.0)
 ---@field origin_y? number Origin point on Y axis (default: 0.0)
 ---@field rotation? number Rotation in radians (default: 0.0)
+---@field opacity? number Opacity value to the rect from 0.0 to 1.0 (default: 1.0)
 ---@field atlas_size? number Size of the texture atlas (default: 0.0)
 ---@field atlas_width? number Width of each frame in the texture atlas (default: 0.0)
 ---@field atlas_height? number Height of each frame in the texture atlas (default: 0.0)
@@ -58,6 +59,7 @@ sucata = {}
 ---@field origin_x? number Origin point on X axis (default: 0.0)
 ---@field origin_y? number Origin point on Y axis (default: 0.0)
 ---@field rotation? number Rotation in radians (default: 0.0)
+---@field opacity? number Opacity value to the text from 0.0 to 1.0 (default: 1.0)
 ---@field align? string Text alignment: "left", "center", or "right" (default: "left")
 ---@field max_width? number Maximum width of the text (default: 0.0)
 
