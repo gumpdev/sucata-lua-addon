@@ -45,20 +45,20 @@ function sucata.gamepad.get_axis(axis, device) end
 ---Get if the button is held on the gamepad
 ---@param button sucata.input.Button The gamepad button
 ---@param device? number The number of the device
----@return bool value if the button is currently held
+---@return boolean value if the button is currently held
 ---@return number device_used The device used
 function sucata.gamepad.is_held(button, device) end
 
 ---Get if the button is pressed on the gamepad
 ---@param button sucata.input.Button The gamepad button
 ---@param device? number The number of the device
----@return bool value if the button is pressed (only in the frame pressed)
+---@return boolean value if the button is pressed (only in the frame pressed)
 ---@return number device_used The device used
 function sucata.gamepad.is_pressed(button, device) end
 
 ---Get if the button is released on the gamepad
 ---@param button sucata.input.Button The gamepad button
 ---@param device? number The number of the device
----@return bool value if the button is released
+---@return boolean value if the button is released
 ---@return number device_used The device used
 function sucata.gamepad.is_released(button, device) end

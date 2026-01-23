@@ -41,7 +41,7 @@ sucata = {}
 ---@field atlas_spacing? number Spacing between frames in the texture atlas (default: 0.0)
 ---@field atlas_margin? number Margin around the frames in the texture atlas (default: 0.0)
 ---@field atlas_x? number X index of the frame in the texture atlas	(default: 0.0)
----@field atlas_y? number Y index of the frame in the texture atlas (default: 0.0)
+---@field atlas_y? number Y index of theb frame in the texture atlas (default: 0.0)
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)
