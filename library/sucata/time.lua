@@ -15,15 +15,15 @@ function sucata.time.get_fps() end
 ---Create a timer with a callback function
 ---@param callback function The function to call when the timer expires
 ---@param config number|Timer Timer duration in seconds, or a timer configuration table
----@return string timer_id The ID of the created timer
+---@return number timer_id The ID of the created timer
 function sucata.time.create_timer(callback, config) end
 
 ---Pause a timer
----@param timer_id string The ID of the timer to pause
+---@param timer_id number The ID of the timer to pause
 function sucata.time.pause_timer(timer_id) end
 
 ---Stop a timer
----@param timer_id string The ID of the timer to stop
+---@param timer_id number The ID of the timer to stop
 function sucata.time.stop_timer(timer_id) end
 
 ---Get time scale

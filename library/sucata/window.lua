@@ -76,3 +76,40 @@ function sucata.window.set_window_icon(path) end
 ---Get the current window icon path
 ---@return string path The file path of the current window icon
 function sucata.window.get_window_icon() end
+
+---@alias CursorType
+---| "default"
+---| "arrow"
+---| "ibeam"
+---| "crosshair"
+---| "pointing_hand"
+---| "resize_ew"
+---| "resize_ns"
+---| "resize_nwse"
+---| "resize_nesw"
+---| "resize_all"
+---| "not_allowed"
+---| "custom_0"
+---| "custom_1"
+---| "custom_2"
+---| "custom_3"
+---| "custom_4"
+---| "custom_5"
+---| "custom_6"
+---| "custom_7"
+---| "custom_8"
+---| "custom_9"
+---| "custom_10"
+---| "custom_11"
+---| "custom_12"
+---| "custom_13"
+---| "custom_14"
+---| "custom_15"
+
+---Set the cursor of your game window
+---@param cursor CursorType The cursor will be displayed in your game
+function sucata.window.set_cursor(path) end
+
+---Get the current cursor from window
+---@return string CursorType The current cursor
+function sucata.window.get_cursor() end
