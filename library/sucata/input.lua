@@ -49,6 +49,8 @@ sucata.input = {}
 ---| "down"
 ---| "left"
 ---| "right"
+---| "tab"
+---| "apostrophe"
 
 ---Get the current mouse position
 ---@return number x The x coordinate of the mouse
