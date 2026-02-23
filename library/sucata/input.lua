@@ -57,6 +57,11 @@ sucata.input = {}
 ---@return number y The y coordinate of the mouse
 function sucata.input.get_mouse_position() end
 
+---Get the current mouse position relative to camera settings
+---@return number x The x coordinate of the mouse
+---@return number y The y coordinate of the mouse
+function sucata.input.get_relative_mouse_position() end
+
 ---Get the current mouse scroll values
 ---@return number x The horizontal scroll value
 ---@return number y The vertical scroll value
