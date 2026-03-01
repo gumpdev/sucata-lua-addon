@@ -20,27 +20,27 @@ function sucata.scene.spawns(entities) end
 
 ---Find an entity by its ID
 ---@param entity_id string The ID of the entity to find
----@return Entity|nil entity The entity table or nil if not found
+---@return State|nil state The entity state or nil if not found
 function sucata.scene.find_by_id(entity_id) end
 
 ---Destroy an entity from the scene
----@param entity_or_id Entity|string The entity table or entity ID to destroy
+---@param entity_or_id State|string The entity table or entity ID to destroy
 ---@return boolean success Whether the entity was successfully destroyed
 function sucata.scene.destroy(entity_or_id) end
 
 ---Destroy multiple entities from the scene
----@param entities Entity[] Array of entity tables to destroy
+---@param entities State[] Array of entity tables to destroy
 ---@return string[] undestroyed_ids Array of IDs of entities that could not be destroyed
 function sucata.scene.destroys(entities) end
 
 ---Add a tag to an entity
----@param entity_or_id Entity|string The entity table or entity ID
+---@param entity_or_id State|string The entity table or entity ID
 ---@param tag string The tag to add
 ---@return boolean success Whether the tag was successfully added
 function sucata.scene.add_tag(entity_or_id, tag) end
 
 ---Check if an entity has a tag
----@param entity_or_id Entity|string The entity table or entity ID
+---@param entity_or_id State|string The entity table or entity ID
 ---@param tag string The tag to check
 ---@return boolean success Whether the entity has the tag
 function sucata.scene.has_tag(entity_or_id, tag) end
