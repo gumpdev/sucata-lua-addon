@@ -4,13 +4,19 @@
 ---@class sucata
 sucata = {}
 
----@class Entity
----@field id string? The unique identifier of the entity, will have an id when spawned
----@field update function? The update function called every frame, contains self as parameter
----@field draw function? The draw function called every frame, contains self as parameter
----@field free function? The free function called when the entity is destroyed, contains self as parameter
----@field init function? The init function called when the entity is spawned, contains self as parameter
+---@class State
+---@field id string The unique identifier of the entity, will have an id when spawned
 ---@field [string] any Custom properties - you can add any field you want to the entity
+
+---@class Behaviour
+---@field tick function? The tick function called every frame, contains state as parameter
+---@field draw function? The draw function called every frame, contains state as parameter
+---@field free function? The free function called when the entity is destroyed, contains state as parameter
+---@field init function? The init function called when the entity is spawned, contains state as parameter
+
+---@class Entity
+---@field state State The state of the entity
+---@field behaviours? Behaviour[] List of behaviours attached to the entity
 
 ---@class Timer
 ---@field time number The duration of the timer in seconds
