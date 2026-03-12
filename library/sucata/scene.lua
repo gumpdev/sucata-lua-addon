@@ -8,6 +8,10 @@ sucata.scene = {}
 ---@param entities Entity[] Array of entity tables to load into the scene
 function sucata.scene.load_scene(entities) end
 
+---Load a entity in global, it is a entity that don't destroy when change scenes
+---@param entity Entity An entity to load in the global
+function sucata.scene.load_global(entity) end
+
 ---Spawn an entity in the scene
 ---@param entity Entity The entity table to spawn
 ---@return string entity_id The ID of the spawned entity
