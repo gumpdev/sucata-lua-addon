@@ -5,7 +5,7 @@
 sucata = {}
 
 ---@class State
----@field id? string The unique identifier of the entity, will have an id when spawned
+---@field id? number The unique identifier of the entity, will have an id when spawned
 ---@field [string] any Custom properties - you can add any field you want to the entity
 
 ---@class Behaviour

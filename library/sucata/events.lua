@@ -10,7 +10,7 @@ sucata.events = {}
 function sucata.events.emit(name, data) end
 
 ---Handle an event with the given name and callback
----@param owner string|Entity The entity owner of the handler (can be entity table or entity ID)
+---@param owner number|Entity The entity owner of the handler (can be entity table or entity ID)
 ---@param name string The name of the event
 ---@param callback function The function to call when the event is emitted
 function sucata.events.on(owner, name, callback) end
