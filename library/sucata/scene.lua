@@ -9,8 +9,9 @@ sucata.scene = {}
 function sucata.scene.load_scene(entities) end
 
 ---Load a entity in global, it is a entity that don't destroy when change scenes
+---@param name string The name of the global entity
 ---@param entity Entity An entity to load in the global
-function sucata.scene.load_global(entity) end
+function sucata.scene.load_global(name, entity) end
 
 ---Spawn an entity in the scene
 ---@param entity Entity The entity table to spawn
@@ -27,10 +28,19 @@ function sucata.scene.spawns(entities) end
 ---@return State|nil state The entity state or nil if not found
 function sucata.scene.find_by_id(entity_id) end
 
+---Gets an global state by name
+---@param global_name string The name of the global
+---@return State|nil state The entity state or nil if not found
+function sucata.scene.get_global(global_name) end
+
 ---Destroy an entity from the scene
 ---@param entity_or_id number|State The entity table or entity ID to destroy
 ---@return boolean success Whether the entity was successfully destroyed
 function sucata.scene.destroy(entity_or_id) end
+
+---Unloads an entity global
+---@param name string The global entity name
+function sucata.scene.unload_global(name) end
 
 ---Destroy multiple entities from the scene
 ---@param entities State[] Array of entity tables to destroy

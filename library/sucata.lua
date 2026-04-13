@@ -50,6 +50,7 @@ sucata = {}
 ---@field atlas_y? number Y index of theb frame in the texture atlas (default: 0.0)
 ---@field shader? string Id of the shader to use (default: "")
 ---@field shader_args? table Arguments for shader render (default: {})
+---@field tiled? boolean If it is true, will repeat the texture with the size, false will scretch the texture
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)
