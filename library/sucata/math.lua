@@ -53,7 +53,7 @@ function sucata.math.normalize(...) end
 
 ---Move a value towards a target by a maximum step
 ---@param current number The current value
----@param target number The rget value
+---@param target number The target value
 ---@param step number The maximum step to move per call
 ---@return number result The new value moved towards target
 function sucata.math.move_towards(current, target, step) end

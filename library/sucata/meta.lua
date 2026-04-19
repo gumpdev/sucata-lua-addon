@@ -4,10 +4,8 @@
 ---@class sucata.meta
 sucata.meta = {}
 
---- The current OS 
--- @field OS string
+---@type string
 sucata.meta.OS = ...
 
---- The current version of Sucata Engine.
--- @field VERSION string
+---@type string
 sucata.meta.VERSION = ...

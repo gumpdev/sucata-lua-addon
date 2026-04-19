@@ -1,4 +1,7 @@
----@class Camera
+---@meta
+
+---The camera module of sucata game engine
+---@class sucata.camera
 sucata.camera = {}
 
 ---Gets the current camera position

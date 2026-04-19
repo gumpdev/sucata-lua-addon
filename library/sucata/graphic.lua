@@ -18,6 +18,19 @@ function sucata.graphic.set_background_color(color) end
 
 ---Loads a sucata shader
 ---@param path string File path to the sucata shader
----@param name string|nil Optional shader name
----@return string shader_name The name of the shader
-function sucata.graphic.load_shader(path, name) end
+---@return number|nil shader_id The ID of the loaded shader, or nil if loading failed
+function sucata.graphic.load_shader(path) end
+
+---Adds a post-processing effect using a loaded shader
+---@param shader_id number The shader ID returned by load_shader
+function sucata.graphic.add_post_processing(shader_id) end
+
+---Sets a parameter on an active post-processing shader
+---@param shader_id number The shader ID of the post-processing effect
+---@param field string The name of the shader argument to set
+---@param value number|table The value to set (number for float, table of 2/3/4 numbers for vec2/vec3/vec4)
+function sucata.graphic.set_post_processing_args(shader_id, field, value) end
+
+---Removes an active post-processing effect
+---@param shader_id number The shader ID of the post-processing effect to remove
+function sucata.graphic.remove_post_processing(shader_id) end

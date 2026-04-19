@@ -47,10 +47,10 @@ sucata = {}
 ---@field atlas_spacing? number Spacing between frames in the texture atlas (default: 0.0)
 ---@field atlas_margin? number Margin around the frames in the texture atlas (default: 0.0)
 ---@field atlas_x? number X index of the frame in the texture atlas	(default: 0.0)
----@field atlas_y? number Y index of theb frame in the texture atlas (default: 0.0)
----@field shader? string Id of the shader to use (default: "")
----@field shader_args? table Arguments for shader render (default: {})
----@field tiled? boolean If it is true, will repeat the texture with the size, false will scretch the texture
+---@field atlas_y? number Y index of the frame in the texture atlas (default: 0.0)
+---@field shader? number ID of the shader to use, returned by load_shader (default: 0)
+---@field shader_args? table Arguments for shader rendering (default: {})
+---@field tiled? boolean Whether the texture should be tiled (default: false)
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)
@@ -71,8 +71,8 @@ sucata = {}
 ---@field opacity? number Opacity value to the text from 0.0 to 1.0 (default: 1.0)
 ---@field align? string Text alignment: "left", "center", or "right" (default: "left")
 ---@field max_width? number Maximum width of the text (default: 0.0)
----@field shader? string Id of the shader to use (default: "")
----@field shader_args? table Arguments for shader render (default: {})
+---@field shader? number ID of the shader to use, returned by load_shader (default: 0)
+---@field shader_args? table Arguments for shader rendering (default: {})
 
 ---@class Rect
 ---@field x number The x position

@@ -8,14 +8,9 @@ sucata.scene = {}
 ---@param entities Entity[] Array of entity tables to load into the scene
 function sucata.scene.load_scene(entities) end
 
----Load a entity in global, it is a entity that don't destroy when change scenes
----@param name string The name of the global entity
----@param entity Entity An entity to load in the global
-function sucata.scene.load_global(name, entity) end
-
 ---Spawn an entity in the scene
 ---@param entity Entity The entity table to spawn
----@return number entity_id The ID of the spawned entity
+---@return string entity_id The ID of the spawned entity
 function sucata.scene.spawn(entity) end
 
 ---Spawn multiple entities in the scene
@@ -24,37 +19,28 @@ function sucata.scene.spawn(entity) end
 function sucata.scene.spawns(entities) end
 
 ---Find an entity by its ID
----@param entity_id number The ID of the entity to find
----@return State|nil state The entity state or nil if not found
+---@param entity_id string The ID of the entity to find
+---@return Entity|nil entity The entity table or nil if not found
 function sucata.scene.find_by_id(entity_id) end
 
----Gets an global state by name
----@param global_name string The name of the global
----@return State|nil state The entity state or nil if not found
-function sucata.scene.get_global(global_name) end
-
 ---Destroy an entity from the scene
----@param entity_or_id number|State The entity table or entity ID to destroy
+---@param entity_or_id Entity|string The entity table or entity ID to destroy
 ---@return boolean success Whether the entity was successfully destroyed
 function sucata.scene.destroy(entity_or_id) end
 
----Unloads an entity global
----@param name string The global entity name
-function sucata.scene.unload_global(name) end
-
 ---Destroy multiple entities from the scene
----@param entities State[] Array of entity tables to destroy
+---@param entities Entity[] Array of entity tables to destroy
 ---@return string[] undestroyed_ids Array of IDs of entities that could not be destroyed
 function sucata.scene.destroys(entities) end
 
 ---Add a tag to an entity
----@param entity_or_id State|number The entity table or entity ID
+---@param entity_or_id Entity|string The entity table or entity ID
 ---@param tag string The tag to add
 ---@return boolean success Whether the tag was successfully added
 function sucata.scene.add_tag(entity_or_id, tag) end
 
 ---Check if an entity has a tag
----@param entity_or_id State|number The entity table or entity ID
+---@param entity_or_id Entity|string The entity table or entity ID
 ---@param tag string The tag to check
 ---@return boolean success Whether the entity has the tag
 function sucata.scene.has_tag(entity_or_id, tag) end
@@ -76,3 +62,22 @@ function sucata.scene.get_entities_by_tag(tag) end
 
 ---Clear all entities from the scene
 function sucata.scene.clear_entities() end
+
+---Registers a callback to run when the scene starts. If the scene has already started, the callback is called immediately.
+---@param callback function The function to call when the scene starts
+function sucata.scene.init(callback) end
+
+---Stores an entity globally so it persists across scene loads
+---@param key string The key to store the entity under
+---@param entity Entity The entity to store
+---@return number entity_id The ID of the spawned global entity
+function sucata.scene.load_global(key, entity) end
+
+---Retrieves a globally stored entity by key
+---@param key string The key the entity was stored under
+---@return Entity|nil entity The global entity state, or nil if not found
+function sucata.scene.get_global(key) end
+
+---Removes a globally stored entity by key
+---@param key string The key of the global entity to remove
+function sucata.scene.unload_global(key) end
