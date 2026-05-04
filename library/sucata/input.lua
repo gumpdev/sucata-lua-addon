@@ -86,8 +86,10 @@ function sucata.input.is_held(...) end
 ---@return boolean released Whether any of the keys/buttons were released
 function sucata.input.is_released(...) end
 
----Check if the mouse is hovering over a specific area for an entity
----@param entity string|table The entity ID or entity table
----@param area {id: string, x: number, y: number, width: number, height: number, z_index: number?, fixed?: boolean} The area to check for hover (z_index is optional)
----@return boolean hovering Whether the mouse is hovering over the specified area
+---Register an area as hoverable for the current frame and return whether the
+---mouse is currently over it. When several registered areas overlap, only the
+---one with the highest z_index reports true — call this every frame for each
+---interactive region (e.g. inside a draw behaviour).
+---@param area {id: string, x: number, y: number, width: number, height: number, z_index?: number, fixed?: boolean} The area to register and test for hover
+---@return boolean hovering Whether the mouse is hovering over this area (and no higher-z area covers it)
 function sucata.input.is_hover(area) end

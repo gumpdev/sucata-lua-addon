@@ -39,12 +39,14 @@ function sucata.math.overlapping(rect1, rect2) end
 ---@return number height The height in pixels
 function sucata.math.screen_relative(rect) end
 
----Convert time to integer numbers by time
+---Convert time to integer steps based on an interval, wrapping the result so
+---the index loops between 0 and max_index. Useful for stepping through animation
+---frames at a fixed rate.
 ---@param current_time number The current time, accumulated delta time
----@param interval number The time of the interval by seconds
----@param max_time number? The maximum time to cap the result (default: nil)
----@return number index The calculated index, will be a integer
-function sucata.math.smooth_index(current_time, interval, max_time) end
+---@param interval number The time of the interval in seconds
+---@param max_index number The maximum index — the result wraps around when it exceeds this value
+---@return number index The calculated index, will be an integer
+function sucata.math.smooth_index(current_time, interval, max_index) end
 
 ---Normalize a vector (accepts variable number of components)
 ---@param ... number Vector components (x, y, z, etc.)
