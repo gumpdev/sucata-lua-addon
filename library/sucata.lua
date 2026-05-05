@@ -51,6 +51,9 @@ sucata = {}
 ---@field shader? number ID of the shader to use, returned by load_shader (default: 0)
 ---@field shader_args? table Arguments for shader rendering (default: {})
 ---@field tiled? boolean Whether the texture should be tiled (default: false)
+---@field tile_size? number Size of the tile (default: 0.0)
+---@field tile_width? number Width of the tile (default: 0.0)
+---@field tile_height? number Height of the tile (default: 0.0)
 
 ---@class TextProps
 ---@field x? number The x position (default: 0)

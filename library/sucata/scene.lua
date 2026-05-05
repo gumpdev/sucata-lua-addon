@@ -20,7 +20,7 @@ function sucata.scene.spawns(entities) end
 
 ---Find an entity by its ID
 ---@param entity_id number The ID of the entity to find
----@return Entity|nil entity The entity table or nil if not found
+---@return State|nil state The entity state or nil if not found
 function sucata.scene.find_by_id(entity_id) end
 
 ---Destroy an entity from the scene
