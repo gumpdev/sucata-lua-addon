@@ -54,6 +54,14 @@ function sucata.window.set_vsync(vsync) end
 ---@return number vsync The current vsync mode
 function sucata.window.get_vsync() end
 
+---Set a hard cap on the frame rate, applied independently of vsync (which is not reliably throttled on every platform/driver). Defaults to 60. Pass 0 to disable the cap.
+---@param max_fps number The maximum frames per second (0 disables the cap)
+function sucata.window.set_max_fps(max_fps) end
+
+---Get the current max FPS cap
+---@return number max_fps The current max FPS cap (0 means no cap)
+function sucata.window.get_max_fps() end
+
 ---Quit the application
 function sucata.window.quit() end
 
