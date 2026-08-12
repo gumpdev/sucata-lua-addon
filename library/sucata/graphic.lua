@@ -13,7 +13,7 @@ function sucata.graphic.draw_rect(props) end
 function sucata.graphic.draw_text(props) end
 
 ---Set the background color of the window
----@param color string Hex color string (e.g., "#RRGGBB" or "#RRGGBBAA")
+---@param color RGBAColor The color as {r, g, b, a?}
 function sucata.graphic.set_background_color(color) end
 
 ---Loads a sucata shader
@@ -34,3 +34,15 @@ function sucata.graphic.set_post_processing_args(shader_id, field, value) end
 ---Removes an active post-processing effect
 ---@param shader_id number The shader ID of the post-processing effect to remove
 function sucata.graphic.remove_post_processing(shader_id) end
+
+---Loads a texture immediately and marks it "hot", exempting it from the automatic per-frame unloading of textures not drawn that frame
+---@param path string File path to the texture to preload
+function sucata.graphic.preload_texture(path) end
+
+---Gets the number of draws after which a texture is automatically promoted to "hot" and stops being unloaded when not drawn in a frame
+---@return number threshold The current hot-texture use threshold (default: 300)
+function sucata.graphic.get_hot_texture_threshold() end
+
+---Sets the number of draws after which a texture is automatically promoted to "hot". Applies going forward only. Pass 0 to disable automatic promotion entirely — textures then only become hot via preload_texture
+---@param threshold number The new hot-texture use threshold, or 0 to disable automatic promotion (minimum 0)
+function sucata.graphic.set_hot_texture_threshold(threshold) end

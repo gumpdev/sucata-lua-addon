@@ -2,7 +2,7 @@
 
 An addon for the [sumneko lua extension](https://luals.github.io/) that provides
 additional functionality and enhancements for
-[Sucata engine](https://github.com/gumpdev/sucata).
+[Sucata engine](https://github.com/sucata-engine/sucata-engine).
 
 ## How to install
 

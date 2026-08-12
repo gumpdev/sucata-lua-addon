@@ -24,12 +24,14 @@ sucata = {}
 ---@field one_shot? boolean Whether the timer should only run once (default: true)
 ---@field loop? boolean Whether the timer should loop (default: false)
 
+---@alias RGBAColor number[] RGBA color as {r, g, b, a?} with values 0.0-1.0; a is optional and defaults to 1.0
+
 ---@class RectProps
 ---@field x? number The x position (default: 0)
 ---@field y? number The y position (default: 0)
 ---@field width? number The width (default: 50)
 ---@field height? number The height (default: 50)
----@field color? string The color in hex format (default: "#ffffff")
+---@field color? RGBAColor The color as {r, g, b, a?} (default: {1, 1, 1, 1})
 ---@field z_index? number The z-index for layering (default: 0)
 ---@field texture? string Path to texture file (default: "")
 ---@field scale? number Uniform scale factor (default: 1.0)
@@ -61,7 +63,7 @@ sucata = {}
 ---@field text? string The text to display (default: "")
 ---@field size? number The font size (default: 16)
 ---@field font? string Path to font file (default: "")
----@field color? string The color in hex format (default: "#ffffff")
+---@field color? RGBAColor The color as {r, g, b, a?} (default: {1, 1, 1, 1})
 ---@field z_index? number The z-index for layering (default: 0)
 ---@field scale? number Uniform scale factor (default: 1.0)
 ---@field scale_x? number Scale factor on X axis (default: 1.0)
