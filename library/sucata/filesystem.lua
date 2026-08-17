@@ -37,3 +37,13 @@ function sucata.filesystem.write(path, content) end
 ---@param old_path string Current path of the file or directory
 ---@param new_path string New path of the file or directory
 function sucata.filesystem.rename(old_path, new_path) end
+
+---@class sucata.filesystem.OpenDialogOptions
+---@field filters string[]? List of allowed file extensions, e.g. {"png", "jpg"} (defaults to allowing any file)
+---@field folder boolean? True to pick a folder instead of a file (default false)
+---@field multiple boolean? True to allow selecting more than one entry (default false)
+
+---Opens the OS native file/folder picker. Blocks until the user closes the dialog.
+---@param options sucata.filesystem.OpenDialogOptions Dialog options
+---@return string|table|nil path The selected full path, a table of full paths when `multiple` is true, or nil if canceled/failed
+function sucata.filesystem.open_dialog(options) end

@@ -97,3 +97,48 @@ sucata = {}
 ---@field pitch? number Pitch of the sound (default: 1.0)
 ---@field group? string Audio group (default: "default")
 ---@field loop? boolean Whether the sound should loop (default: false)
+
+---Shared optional overrides accepted by every sucata.ui.draw_* widget call.
+---@class UIStyle
+---@field x? number Overrides the widget's auto-layout x position; must be set together with y/width/height
+---@field y? number Overrides the widget's auto-layout y position; must be set together with x/width/height
+---@field width? number Overrides the widget's auto-layout width; must be set together with x/y/height
+---@field height? number Overrides the widget's auto-layout height; must be set together with x/y/width
+---@field text_size? number Text pixel height (default font height is 18); scales the bitmap font, large values look blocky
+---@field color? RGBAColor Text color as {r, g, b, a?}
+---@field background_color? RGBAColor Widget frame/background color as {r, g, b, a?}
+---@field border_color? RGBAColor Border color as {r, g, b, a?}; set alpha to 0 to hide the border
+
+---@class UIWindowProps : UIStyle
+---@field title? string Window title, also used as its unique id (default: "Window")
+---@field x? number The x position (default: 40)
+---@field y? number The y position (default: 40)
+---@field width? number The width (default: 200)
+---@field height? number The height (default: 150)
+---@field transparent? boolean Hide the window body background, keeps the title bar (default: false)
+---@field movable? boolean Whether the title bar can be dragged to move the window (default: true)
+---@field resizable? boolean Whether the resize handle is shown (default: true)
+
+---@class UITextWidgetProps : UIStyle
+---@field text? string The text to display (default: "")
+
+---@class UIButtonProps : UIStyle
+---@field text? string The button label (default: "")
+
+---@class UICheckboxProps : UIStyle
+---@field id string Unique key used to persist the checked state across frames
+---@field text? string The checkbox label (default: "")
+
+---@class UISliderProps : UIStyle
+---@field id string Unique key used to persist the value across frames
+---@field value? number Initial value; only used the first time this id is seen (default: 0)
+---@field low? number Minimum value (default: 0)
+---@field high? number Maximum value (default: 100)
+---@field step? number Step increment; 0 means continuous (default: 0)
+
+---@class UITextboxProps : UIStyle
+---@field id string Unique key used to persist the typed text across frames
+---@field text? string Initial text; only used the first time this id is seen (default: "")
+
+---@class UIPopupProps
+---@field name string Unique popup id, matching the name passed to sucata.ui.popup_open
