@@ -68,3 +68,36 @@ function sucata.ui.draw_slider(props) end
 ---@return boolean submitted True on the frame Enter was pressed
 ---@return string text The current text
 function sucata.ui.draw_textbox(props) end
+
+---Draws a collapsible header/section title. Expanded state is tracked
+---internally by microui, keyed by props.text.
+---@param props UIHeaderProps
+---@return boolean open
+function sucata.ui.draw_header(props) end
+
+---Begins a collapsible tree node. Widgets drawn between this and
+---end_treenode() are indented and only rendered while expanded. Expanded
+---state is tracked internally by microui, keyed by props.text.
+---IMPORTANT: only call sucata.ui.end_treenode() if this returned true.
+---@param props UITreeNodeProps
+---@return boolean open
+function sucata.ui.begin_treenode(props) end
+
+---Ends a tree node opened with sucata.ui.begin_treenode(). Only call this if
+---the matching begin_treenode() call returned true.
+function sucata.ui.end_treenode() end
+
+---Starts a new row of widgets with fixed/relative column widths. Every
+---widget drawn after this call occupies the next column until #widths
+---widgets have been placed, then it wraps to a new row using the same
+---widths again.
+---@param props UILayoutRowProps
+function sucata.ui.layout_row(props) end
+
+---Begins a sub-layout column, occupying the current layout cell. Useful to
+---stack widgets vertically inside one column of a layout_row.
+---IMPORTANT: always pair with sucata.ui.layout_end_column().
+function sucata.ui.layout_begin_column() end
+
+---Ends a column opened with sucata.ui.layout_begin_column().
+function sucata.ui.layout_end_column() end

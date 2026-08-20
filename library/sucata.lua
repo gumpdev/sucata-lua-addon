@@ -142,3 +142,15 @@ sucata = {}
 
 ---@class UIPopupProps
 ---@field name string Unique popup id, matching the name passed to sucata.ui.popup_open
+
+---@class UIHeaderProps : UIStyle
+---@field text? string The header label, also used as its unique id (default: "")
+---@field expanded? boolean Whether it's expanded the first time this label is seen (default: false)
+
+---@class UITreeNodeProps : UIStyle
+---@field text? string The tree node label, also used as its unique id (default: "")
+---@field expanded? boolean Whether it's expanded the first time this label is seen (default: false)
+
+---@class UILayoutRowProps
+---@field widths? number[] Column widths in pixels: positive is a fixed width, negative fills remaining row space (e.g. -1 takes up the rest), 0/omitted uses the widget's default width. Row wraps to the next line after `#widths` widgets are drawn.
+---@field height? number Row height in pixels; 0/omitted uses the widget's default height (default: 0)
